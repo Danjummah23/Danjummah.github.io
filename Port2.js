@@ -20,9 +20,9 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const container = document.querySelector('.container');
 const languages = [
-  "I hope you enjoy my Portfolio.",
-  "j'espère que vous apprécierez mon portfolio.",
-  "ina fatan za ku ji dadin fayil na."
+    "I am Udemy certified!!",
+    "Je suis certifié Udemy!!",
+    "Ni ne Udemy bokan!!"
 ];
 
 let languageIndex = 0;
