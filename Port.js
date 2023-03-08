@@ -9,11 +9,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 window.onload = (function() {
-console.log('test')
+    console.log('test')
 
-const hiddenElements = document.querySelectorAll(".hidden");
-console.log(hiddenElements)
-hiddenElements.forEach((el) => observer.observe(el));
+    const hiddenElements = document.querySelectorAll(".hidden");
+    console.log(hiddenElements)
+    hiddenElements.forEach((el) => observer.observe(el));
 
 })
 
@@ -26,8 +26,23 @@ const languages = [
     "Ni ne Udemy bokan!!"
 ];
 
+const aboutMe = {
+    Eng: "About Me",
+    Fre: "Sur Moi",
+    Gha: "Batun Na",
+    Nor: "Om Meg"
+}
+
+
 let languageIndex = 0;
 let charIndex = 0;
+
+function changeLanguage(country) {
+    const language = aboutMe[country];
+    let text = document.getElementById("aboutMeHeader")
+    text.innerText = language
+
+}
 
 function writeText() {
     const language = languages[languageIndex];
@@ -60,21 +75,21 @@ const norwegianCode = 'no';
 
 // Add event listeners to the language buttons
 englishButton.addEventListener('click', function() {
-  // Set the language attribute of the html tag to English
-  document.documentElement.lang = englishCode;
+    // Set the language attribute of the html tag to English
+    document.documentElement.lang = englishCode;
 });
 
 frenchButton.addEventListener('click', function() {
-  // Set the language attribute of the html tag to French
-  document.documentElement.lang = frenchCode;
+    // Set the language attribute of the html tag to French
+    document.documentElement.lang = frenchCode;
 });
 
 hausaButton.addEventListener('click', function() {
-  // Set the language attribute of the html tag to Hausa
-  document.documentElement.lang = hausaCode;
+    // Set the language attribute of the html tag to Hausa
+    document.documentElement.lang = hausaCode;
 });
 
 norwegianButton.addEventListener('click', function() {
-  // Set the language attribute of the html tag to Norwegian
-  document.documentElement.lang = norwegianCode;
+    // Set the language attribute of the html tag to Norwegian
+    document.documentElement.lang = norwegianCode;
 });
